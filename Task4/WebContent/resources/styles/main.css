@@ -1,0 +1,360 @@
+html {
+	p: 0;
+	margin: 0;
+	max-width: 1100px;
+	min-width: 970px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+body {
+	
+}
+
+.noApplicants {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 20px;
+}
+
+hr {
+	width: 100%;
+	background: #383838;
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {
+	font-family: 'Chaparral Pro';
+	src: url("/resources/fonts/CHAPARRALPRO-LIGHTIT.otf");
+}
+
+@font-face {
+	font-family: 'Corbel';
+	font-weight: normal;
+	font-style: normal;
+	src: url('CORBEL.TTF') format('truetype');
+	font-style: normal;
+}
+/* ///////////////////// 	HEADER    ////////////////////// */
+.header {
+	width: 99%;
+	min-width: 960;
+	height: 100px;
+	line-height: 100px;
+}
+
+.headerLogo1, .headerLogo2 {
+	display: inline-block;
+	margin: auto 0;
+	padding: 0 0 0 30px;
+	height: 100%;
+	vertical-align: middle;
+	font-family: "Corbel";
+} 
+
+.headerLogo1 {
+	font-weight: lighter;
+}
+
+.headerLogo2 {
+	font-weight: bolder;
+}
+
+#menu {
+	float: right;
+}
+
+.menu ul {
+	list-style: none;
+}
+
+.menu>a {
+	text-decoration: none;
+	color: #999999;
+	display: inline-block;
+	/* text-indent: 5px; */
+	width: 120px;
+	vertical-align: middle;
+	height: 50%;
+	text-align: center;
+	margin-left: 5px;
+}
+
+.menu>a:HOVER {
+	color: #C9C9C9;
+	border-top: 5px black solid;
+	margin-top: -5px;
+}
+/* ////////////////////////////////////////////////////////////// */
+
+/* ///////////////////// ADMIN LOGIN FROM ////////////////////// */
+#adminId {
+	float: right;
+	width: 25%;
+	min-width: 250px;
+	padding-top: 45px;
+}
+
+.adminLogout {
+	text-align: right;
+	font-family: 'Chaparral Pro';
+	font-style: italic;
+	color: gray;
+}
+
+.adminLogout a {
+	
+}
+
+#ApplicantForm {
+	margin: 0 auto;
+	width: 30%;
+	min-width: 250px;
+	border: 1px #E5E5E5 solid;
+	box-shadow: 1px 1px 5px #EFEFEF;
+	padding: 10px;
+}
+
+.ApplicantForm > .submit {
+	margin-top: 20px;
+}
+
+.adminClass p, 
+.ApplicantForm p {
+	padding: 0;
+	margin: 5px;
+}
+
+.adminClass  input {
+	padding: 3px 9px;
+}
+
+.ApplicantForm input {
+	padding: 5px 9px;
+}
+
+.adminClass  input,
+.ApplicantForm input {
+	width: 100px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 13px/100% Verdana, Tahoma, sans-serif;
+	background: #FFFFFF;
+}
+
+.adminClass input:hover,.adminClass textarea:hover,.adminClass input:focus,.adminClass textarea:focus,
+.ApplicantForm input:hover,.ApplicantForm textarea:hover,.ApplicantForm input:focus,.ApplicantForm textarea:focus
+{
+	border-color: #C9C9C9;
+}
+
+.adminClass input[type="checkbox"] {
+	/* display: none; */
+	padding: 0px;
+	width: 30px;
+	display: inline;
+}
+
+.adminClass input[type="checkbox"]+label {
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	content: '╳';
+}
+
+.adminClass label,
+.ApplicantForm label,
+.commonInfo, 
+.subjectInfo  {
+	margin-left: 10px;
+	color: #565656;
+	/* font-family: 'Chaparral'; */
+	font-family: 'Chaparral Pro';
+	font-style: normal;
+}
+
+input[type=submit]{
+	width: auto;
+	padding: 5px 15px;
+	background: #617798;
+	border: 0;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+.commonInfo, .subjectInfo {
+	padding: 50px 20px 20px 15px;
+	
+}
+/* //////////////////////////////////////////////////// */
+
+/* ////////////////// PAGE BODY ////////////////////// */
+#contentWrapper {
+	width: 74%;
+	float: left;
+}
+
+.pageTitle {
+	text-align: center;
+	font-size: 45px;
+	font-family: 'Chaparral Pro';
+	font-style: italic;
+	padding: 20px;
+	margin: 0;
+}
+/* //////////////////////////////////////////////////// */
+/* ////////////////// PAGE TABLE FACULTY ////////////////////// */
+.facultyTable {
+	width: 70%;
+}
+
+.studentsTable {
+	width: 70%;
+}
+
+.applicantTable {
+	width: 65%;
+}
+
+.adminTable {
+	width: 75%;
+	min-width: 600px;
+}
+
+.facultyTable, .studentsTable, .applicantTable, .adminTable {
+	font: 85% "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS",
+		sans-serif;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-collapse: collapse;
+	color: #333;
+	background: #F3F5F7;
+	box-shadow: 1px 1px 5px #EFEFEF;
+}
+
+.facultyTable tbody tr, 
+.studentsTable tbody tr
+.applicantTable tbody tr,
+.adminTable tbody tr  {
+	background: #F3F5F7;
+	height: 30px;
+}
+
+.studentsTable tbody tr span,
+.applicantTable tbody tr span,
+.adminTable tbody tr span {
+	padding-left: 10px;
+}
+
+.facultyTable  tbody tr.odd, 
+.studentsTable tbody tr.odd,
+.applicantTable tbody tr.odd,
+.adminTable tbody tr.odd {
+	background: #F0F2F4;
+}
+
+.facultyTable  tbody  tr:hover,
+.studentsTable tbody tr:hover,
+.applicantTable tbody tr:hover,
+.adminTable tbody tr:hover {
+	background: #EAECEE;
+	color: #111;
+}
+
+.facultyTable tbody,
+.studentsTable tbody,
+.applicantTable tbody,
+.adminTable tbody {
+	border-bottom: 1px solid #EAECEE;
+}
+
+.facultyTable tbody, .facultyTable thead, 
+.studentsTable tbody, .studentsTable thead,
+.applicantTable tbody, .applicantTable thead,
+.adminTable tbody, .adminTable thead {
+	border-left: 1px solid #EAECEE;
+	border-right: 1px solid #EAECEE;
+}
+
+.facultyTable thead th, 
+.studentsTable thead th,
+.applicantTable thead th,
+.adminTable thead th {
+	background: #3A4856;
+	padding: 15px 10px;
+	color: #fff;
+	text-align: left;
+	font-weight: normal;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.facultyTable td:not(:FIRST-CHILD),
+.studentsTable td:not(:FIRST-CHILD),
+.applicantTable td:not(:FIRST-CHILD),
+.adminTable td:not(:FIRST-CHILD) {
+	text-align: center;
+}
+
+.facultyTable a {
+	color: #3A4856;
+	text-decoration: none;
+	/* border-bottom: 1px solid #C6C8CB; */
+	padding-left: 5px;
+	font-size: 1.2em;
+}
+
+.facultyTable a:visited,
+.studentsTable a:visited {
+	color: #777;
+}
+
+.facultyTable a:hover,
+.studentsTable a:hover {
+	color: #000;
+}
+
+.submit {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 15px;
+}
+/* //////////////////////////////////////////////////// */
+
+.ApplicantInfoClass,.RequaredSubjectClass { /*
+	background: #F7F7F7;
+	margin: 0 auto;
+}
+
+.ApplicantInfoClass p,span {
+	margin: 0;
+	padding: 0;
+}
+
+.RequaredSubjectClass p,span {
+	margin: 0;
+	padding: 0;
+}
+
+.RequaredSubjectClass input[type=submit] {
+	width: 100%;
+	height: 50px;
+	background: #4A529E;
+	text: white;
+}
+
+#languages {
+	float: right;
+	background: #009900;
+	display: block;
+}
+
+#langs {
+	float: right;
+}
+
+
+
+
