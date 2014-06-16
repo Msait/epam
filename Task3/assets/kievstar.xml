@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariff xmlns="http://www.imobile.com/tariff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imobile.com/tariff tariff.xsd ">
+	<tariff-element id="idvalue2">
+		<name>Kievstar Free</name>
+		<operator>Kievstar</operator>
+		<payroll>14.4</payroll>
+		<call-prices>
+			<within-the-network>0</within-the-network>
+			<other-networks>0.25</other-networks>
+			<landlines>1.25</landlines>
+		</call-prices>
+		<SMS-price>1.5</SMS-price>
+		<parameters>
+			<favorite-number>0557755114</favorite-number>
+			<tarification>minute</tarification>
+			<connection-fee>0.0</connection-fee>
+		</parameters>
+	</tariff-element>
+	<tariff-element id="idvalue1">
+		<name>Unlimited calls</name>
+		<operator>MTC</operator>
+		<payroll>15.0</payroll>
+		<call-prices>
+			<within-the-network>0</within-the-network>
+			<other-networks>0.25</other-networks>
+			<landlines>0.25</landlines>
+		</call-prices>
+		<SMS-price>0.0</SMS-price>
+		<parameters>
+			<favorite-number>0663745198</favorite-number>
+			<favorite-number>0663745199</favorite-number>
+			<tarification>12-seconds</tarification>
+			<connection-fee>0.0</connection-fee>
+		</parameters>
+	</tariff-element>
+</tariff>

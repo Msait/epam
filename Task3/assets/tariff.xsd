@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.imobile.com/tariff"
+	xmlns="http://www.imobile.com/tariff" elementFormDefault="qualified">
+
+	<xs:element name="tariff" type="specific-tariff" />
+	
+	<!-- definition of simple elements -->
+	<xs:simpleType name="tariffications">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="12-seconds" />
+			<xs:enumeration value="minute" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="text-name">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3" />
+			<xs:maxLength value="20" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- definition of complex elements -->
+	<xs:complexType name="specific-tariff">
+		<xs:sequence>
+			<xs:element name="tariff-element" type="tariff-type"
+				maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tariff-type">
+		<xs:sequence>
+			<xs:element name="name" type="text-name" />
+			<xs:element name="operator" type="xs:string" />
+			<xs:element name="payroll" type="xs:decimal" />
+			<xs:element name="call-prices" type="call-types" />
+			<xs:element name="SMS-price" type="xs:decimal" />
+			<xs:element name="parameters" type="parameters-type" />
+		</xs:sequence>
+		<!-- definition of attributes -->
+		<xs:attribute name="id" type="xs:ID" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="call-types">
+		<xs:sequence>
+			<xs:element name="within-the-network" type="xs:decimal" />
+			<xs:element name="other-networks" type="xs:decimal" />
+			<xs:element name="landlines" type="xs:decimal" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="parameters-type">
+		<xs:sequence>
+			<xs:element name="favorite-number" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="0\d{9}" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="tarification" type="tariffications" />
+			<xs:element name="connection-fee" type="xs:decimal" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
